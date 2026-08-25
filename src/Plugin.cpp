@@ -6,10 +6,13 @@ import LatticeCxxPlugin.CxxToolchain;
 import LatticeCxxPlugin.CxxLibrary;
 import LatticeCxxPlugin.CxxBinary;
 
-auto Initialize() -> void {
+inline auto Initialize() -> void {
     Lattice::Registry::GetInstance()->Register<std::shared_ptr<LatticeCxxPlugin::CxxToolchainFactory::FactoryType>>("cxx-toolchain-factory", LatticeCxxPlugin::CxxToolchainFactory::GetInstance());
     Lattice::Registry::GetInstance()->Register<std::shared_ptr<LatticeCxxPlugin::CxxLibraryFactory::FactoryType>>("cxx-library-factory", LatticeCxxPlugin::CxxLibraryFactory::GetInstance());
     Lattice::Registry::GetInstance()->Register<std::shared_ptr<LatticeCxxPlugin::CxxBinaryFactory::FactoryType>>("cxx-binary-factory", LatticeCxxPlugin::CxxBinaryFactory::GetInstance());
+
+    LatticeCxxPlugin::SetupDefaultCxxToolchain();
+    LatticeCxxPlugin::SetupDefaultCcToolchain();
 }
 
 auto GetID() -> const char* {

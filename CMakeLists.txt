@@ -13,9 +13,11 @@ project(LatticeCxxPlugin
     LANGUAGES CXX
 )
 
+find_package(yaml-cpp REQUIRED)
+
 FetchContent_Declare(
   lattice
-  GIT_REPOSITORY file:///home/thetimbrick/Projects/Lattice
+  GIT_REPOSITORY https://github.com/proatgram/Lattice.git
   GIT_TAG        main
 )
 

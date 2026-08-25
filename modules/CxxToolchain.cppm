@@ -4,6 +4,8 @@ import Lattice.Object.IToolchain;
 import Lattice.Object.ILibrary;
 
 export namespace LatticeCxxPlugin {
+    using Lattice::Object::ToolchainDefault;
+
     class CxxToolchain final : public Lattice::Object::IToolchain {
         public:
             CxxToolchain(Lattice::Object::IToolchain::Constructable, const std::string &identifier);
@@ -23,4 +25,7 @@ export namespace LatticeCxxPlugin {
 
         private:
     };
+
+    auto SetupDefaultCcToolchain() -> void;
+    auto SetupDefaultCxxToolchain() -> void;
 }  // export namespace LatticeCxxPlugin

@@ -21,4 +21,5 @@ target_link_libraries(LatticeCxxPlugin
         lattice::Registry
     PRIVATE
         lattice::Object
+        yaml-cpp::yaml-cpp
 )
