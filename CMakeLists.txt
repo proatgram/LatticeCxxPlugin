@@ -9,7 +9,7 @@ set(CMAKE_CXX_SCAN_FOR_MODULES TRUE)
 project(LatticeCxxPlugin
     VERSION 0.1
     DESCRIPTION "A C/C++ Plugin for Lattice"
-    HOMEPAGE_URL "https://github.com/proatgram/lattice-cxx"
+    HOMEPAGE_URL "https://github.com/proatgram/LatticeCxxPlugin"
     LANGUAGES CXX
 )
 
